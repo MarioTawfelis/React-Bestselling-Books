@@ -1,39 +1,39 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
-
-
-
-
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <section>
+    <section className="booklist">
+      <Book />
       <Book />
       <Book />
       <Book />
       <Book />
     </section>
-
-  )
+  );
 }
 
-function Book(props) {
+function Book() {
   return (
-    <article>
+    <article className="book">
       <Image />
       <Title />
       <Author />
     </article>
-  )
+  );
 }
 
-const Image = () => <h2>Image Placeholder</h2>
-const Title = () => <h2>Title Placeholder</h2>
-const Author = () => <h4>Author Placeholder</h4>
+const Image = () => (
+  <img
+    src="https://m.media-amazon.com/images/I/51-nXsSRfZL._SX328_BO1,204,203,200_.jpg"
+    alt="Atomic Habits by James Clear"
+  />
+);
 
-export default App
+const Title = () => <h2>Atomic Habits</h2>;
+const Author = () => (
+  <h4 style={{ color: "#617d98", marginTop: "0.5rem", fontSize: "0.85rem" }}>
+    James Clear
+  </h4>
+);
+
+export default App;
