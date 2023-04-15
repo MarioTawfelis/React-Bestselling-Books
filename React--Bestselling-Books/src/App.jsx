@@ -8,32 +8,24 @@ function App() {
       <Book />
       <Book />
       <Book />
+      <Book />
     </section>
   );
 }
 
 function Book() {
+  const title = "Atomic Habits"
+  const author = "James Clear"
   return (
     <article className="book">
-      <Image />
-      <Title />
-      <Author />
+      <img
+        src="https://m.media-amazon.com/images/I/51-nXsSRfZL._SX328_BO1,204,203,200_.jpg"
+        alt="Atomic Habits by James Clear"
+      />
+      <h2>{title}</h2>
+      <h4>{author}</h4>
     </article>
   );
 }
-
-const Image = () => (
-  <img
-    src="https://m.media-amazon.com/images/I/51-nXsSRfZL._SX328_BO1,204,203,200_.jpg"
-    alt="Atomic Habits by James Clear"
-  />
-);
-
-const Title = () => <h2>Atomic Habits</h2>;
-const Author = () => (
-  <h4 style={{ color: "#617d98", marginTop: "0.5rem", fontSize: "0.85rem" }}>
-    James Clear
-  </h4>
-);
 
 export default App;

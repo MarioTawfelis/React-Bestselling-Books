@@ -40,10 +40,10 @@ body {
   font-size: 1rem;
 }
 
-/* This won't work, because we already have an
-color style being applied using inline CSS, using JSX */
 .book h4 {
-  color: red;
+  color: #617d98;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
 }
 
 @media screen and (min-width: 768px) {
